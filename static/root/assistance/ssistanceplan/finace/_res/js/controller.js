@@ -16,7 +16,6 @@ app.controller('planfinaceCtrl', function($scope, planSer,$stateParams,$state,to
         var vm = $scope;
         vm.finaceId.id=$stateParams.id;
         planSer.planFinace(vm.finaceId).then(function(response){
-            console.log(response)
             if(response.data.code == 0){
                 $state.go('root.assistance.ssistanceplan.list[12]');
                 toastr.success( "审核成功", '温馨提示');

@@ -23,7 +23,7 @@ app.controller('hotEditCtrl', function($scope, hotSer,$stateParams,$state,toastr
         vm.editId.outTime = angular.element('.outTime').val();
         hotSer.editHot(vm.editId).then(function(response){
             if(response.data.code == 0){
-                $state.go('root.assistance.record.list[12]');
+                $state.go('root.assistance.hotassist.list[12]');
                 toastr.success( "编辑成功", '温馨提示');
             }else{
                 toastr.error( response.data.msg, '温馨提示');

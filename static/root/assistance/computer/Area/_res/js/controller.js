@@ -19,9 +19,7 @@ app.controller('computerAreaCtrl',function($scope,computerSer,toastr,ipCookie){
     });
     $scope.myFunc=function () {
         var data={area:$scope.area};
-        console.log(data)
         computerSer.ComputerArea(data).then(function(response){
-            console.log(response)
             if(response.data.code == 0){
                 $scope.summaryLists = response.data.data;
             }else{

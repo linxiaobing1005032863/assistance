@@ -8,9 +8,10 @@
                 </li>
                 <li class="required">
                     <label><i><img src="/images/mandatory.png"></i><em>本人是否已领补助</em></label>
-                    <select class="sele" ng-model="addId.recieveCondition">
-                        <option >是</option>
-                        <option >否</option>
+                    <select class="sele" ng-model="addId.recieveCondition" ng-verify="{}">
+                        <option value=""></option>
+                        <option  value="">是</option>
+                        <option  value="">否</option>
                     </select>
                 </li>
                 <li>

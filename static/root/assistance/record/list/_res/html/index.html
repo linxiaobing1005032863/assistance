@@ -1,0 +1,94 @@
+<div class="content-tab list">
+    <ul class="table">
+        <li class="list-head">
+            <span></span>
+            <span>员工姓名</span>
+            <span>员工编号</span>
+            <span>地区</span>
+            <span>项目组</span>
+            <span>岗位</span>
+            <span>入职时间</span>
+            <span>补助方案序号</span>
+            <span></span>
+        </li>
+        <li class="list-all" ng-repeat="lists in recordLi" style="display: {{lists._delete?'none':'block'}};">
+            <section>
+                <div class="list-text {{lists._selectList?'selectList':''}}" ng-click="selectList(lists)">
+                    <p mod>{{$index+1+num}}</p>
+                    <p mod>{{::lists.empName}}</p>
+                    <p mod>{{::lists.empNumber}}</p>
+                    <p mod>{{::lists.area}}</p>
+                    <p mod>{{::lists.projectGroup}}</p>
+                    <p mod>{{::lists.job}}</p>
+                    <p mod>{{::lists.entryJobTime}}</p>
+                    <p mod>{{::lists.planNumber}}</p>
+                    <p>
+                        <a href="javascript:void(0)" class="more" ng-click="moreList(lists)">更多详细</a>
+                    </p>
+                </div>
+                <div class="can">
+                    <ul class="can-see" style="display: {{lists._moreList?'block':'none'}};">
+                        <li>
+                            <p class="see-parent">
+                                <span>补助名称</span>
+                                <span>获得补助的开始时间</span>
+                                <span>计薪周期开始时间</span>
+                                <span>计薪周期结束时间 </span>
+                                <span>获得补助的天数</span>
+                                <span>补助内容</span>
+                                <span>内容明细</span>
+                                <span>补助形式</span>
+                            </p>
+                            <p class="see-children">
+                                <span mod>{{::lists.assistName}}</span>
+                                <span mod>{{::lists.assistStartTime}}</span>
+                                <span mod>{{::lists.salaryStartTime}}</span>
+                                <span mod>{{::lists.salaryEndTime }}</span>
+                                <span mod>{{::lists.assistDays}}</span>
+                                <span mod>{{::lists.assistContent }}</span>
+                                <span mod>{{::lists.contentDetail}}</span>
+                                <span mod>{{::lists.assistForm}}</span>
+                            </p>
+                        </li>
+                        <li>
+                            <p class="see-parent">
+                                <span>补助发放时间</span>
+                                <span>本人是否已领补助</span>
+                                <span>备注</span>
+                            </p>
+                            <p class="see-children">
+                                <span mod>{{::lists.assistGiveTime}}</span>
+                                <span mod>{{::lists.recieveCondition}}</span>
+                                <span mod>{{::lists.remark}}</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </li>
+    </ul>
+    <div class="module">
+        <div class="see-module">
+            <p class="see-type">体现类型</p>
+            <p class="see-description"></p>
+            <button class="btn" modclose>关闭</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <pagination count="custom.itemsCount" take="custom.take" activate="custom.activatePage"></pagination>
+    </footer>
+</div>
+<div class="delete mod" ng-show="delShow">
+    <div class="del-head">
+        <h5>温馨提示</h5>
+    </div>
+    <div class="del-con">
+        <p>确定要删除这条数据？</p>
+        <div class="btn">
+            <button ng-click="delFn()">确定</button>
+            <button ng-click="cancel()">取消</button>
+        </div>
+    </div>
+</div>
+<div id="modalbg" ng-show="delShow"></div>
+

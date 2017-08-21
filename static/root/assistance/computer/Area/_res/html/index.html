@@ -1,0 +1,44 @@
+<div class="collect ">
+    <div class="sum-select">
+        <ul>
+            <li class="required">
+                <label><i><img src="/images/mandatory.png"></i><em>地区</em></label>
+                <select class="sele  select1" ng-model="area"  ng-change="myFunc()">
+                    <option ng-repeat="list in workOptions">{{list}}</option>
+                </select>
+            </li>
+        </ul>
+    </div>
+    <ul class="sum-list list2" ng-hide="area">
+        <li class="sum-thead">
+            <span>地区</span>
+            <span>金额</span>
+        </li>
+        <li class="sum-tbody" ng-repeat="summaryList in summaryListss" ng-model="tabTit">
+            <span>{{summaryList.area}}</span>
+            <span>{{summaryList.assistMoney}}</span>
+        </li>
+    </ul>
+    <ul class="sum-list" ng-show="area">
+        <li class="sum-thead">
+            <span>地区</span>
+            <span>姓名</span>
+            <span>项目组</span>
+            <span>电脑补助开始时间</span>
+            <span>电脑补助结束时间</span>
+            <span>补助计薪周期开始时间</span>
+            <span>补助计薪周期结束时间</span>
+            <span>补助天数</span>
+        </li>
+        <li class="sum-tbody" ng-repeat="summaryList in summaryLists">
+            <span>{{summaryList.area}}</span>
+            <span>{{summaryList.empName}}</span>
+            <span>{{summaryList.projectGroup}}</span>
+            <span>{{summaryList.assistStartTime}}</span>
+            <span>{{summaryList.assistEndTime}}</span>
+            <span>{{summaryList.salaryStartTime}}</span>
+            <span>{{summaryList.salaryEndTime}}</span>
+            <span>{{summaryList.assistDays}}</span>
+        </li>
+    </ul>
+</div>

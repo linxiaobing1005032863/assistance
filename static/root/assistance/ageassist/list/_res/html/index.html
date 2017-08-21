@@ -1,0 +1,75 @@
+<div class="content-tab list">
+    <ul class="table">
+        <li class="list-head">
+            <span></span>
+            <span>地区</span>
+            <span>姓名</span>
+            <span>员工编号</span>
+            <span>项目组</span>
+            <span>岗位</span>
+            <span>入职日期</span>
+            <span>开始发放补助日期</span>
+            <span></span>
+        </li>
+        <li class="list-all" ng-repeat="lists in ageLi" style="display: {{lists._delete?'none':'block'}};">
+            <section>
+                <div class="list-text {{lists._selectList?'selectList':''}}" ng-click="selectList(lists)">
+                    <p mod>{{$index+1+num}}</p>
+                    <p mod>{{::lists.area}}</p>
+                    <p mod>{{::lists.empName}}</p>
+                    <p mod>{{::lists.empNumber}}</p>
+                    <p mod>{{::lists.projectGroup}}</p>
+                    <p mod>{{::lists.jobPosition}}</p>
+                    <p mod>{{::lists.entryTime}}</p>
+                    <p mod>{{::lists.giveAssistTime}}</p>
+                    <p>
+                        <a href="javascript:void(0)" class="more" ng-click="moreList(lists)">更多详细</a>
+                    </p>
+                </div>
+                <div class="can">
+                    <ul class="can-see" style="display: {{lists._moreList?'block':'none'}};">
+                        <li>
+                            <p class="see-parent">
+                                <span>本公司工龄(月)</span>
+                                <span>应获补助</span>
+                                <span>状态</span>
+                                <span style="display:none">id</span>
+
+                            </p>
+                            <p class="see-children">
+                                <span mod>{{::lists.jobAge}}</span>
+                                <span mod>{{::lists.assisCondition}}</span>
+                                <span mod>{{::lists.empStatus}}</span>
+                                <span mod style="display:none">{{::lists.id }}</span>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </li>
+    </ul>
+    <div class="module">
+        <div class="see-module">
+            <p class="see-type">体现类型</p>
+            <p class="see-description"></p>
+            <button class="btn" modclose>关闭</button>
+        </div>
+    </div>
+    <footer class="footer">
+        <pagination count="custom.itemsCount" take="custom.take" activate="custom.activatePage"></pagination>
+    </footer>
+</div>
+<div class="delete mod" ng-show="delShow">
+    <div class="del-head">
+        <h5>温馨提示</h5>
+    </div>
+    <div class="del-con">
+        <p>确定要删除这条数据？</p>
+        <div class="btn">
+            <button ng-click="delFn()">确定</button>
+            <button ng-click="cancel()">取消</button>
+        </div>
+    </div>
+</div>
+<div id="modalbg" ng-show="delShow"></div>
+

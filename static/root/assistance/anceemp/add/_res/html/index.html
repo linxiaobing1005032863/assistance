@@ -1,0 +1,78 @@
+<div class="content-input add" verify-scope="tipStyle: 1">
+    <div class="input-list">
+        <section>
+            <ul>
+                <li class="required">
+                    <label><i><img src="/images/mandatory.png"></i><em>补助名称</em></label>
+                    <div class="sele side">
+                        <select class="sele" ng-model="addId.assistName">
+                            <option >电脑补助</option>
+                            <option >高温补助</option>
+                            <option >工龄补助</option>
+                            <option >住宿补助</option>
+                        </select>
+                        <input type="text"  class="inputDom"  ng-model="addId.assistName" ng-verify="{}">
+                    </div>
+                </li>
+                <li>
+                    <label><em>补助方案</em></label>
+                    <input type="text" ng-model="addId.planNumber">
+                </li>
+                <li>
+                    <label><em>补助内容</em></label>
+                    <input type="text" ng-model="addId.assistContent">
+                </li>
+                <li>
+                    <label><em>内容明细</em></label>
+                    <input type="text" ng-model="addId.contentDetail">
+                </li>
+                <li>
+                    <label><em>获得补助开始时间</em></label>
+                        <input type="text" onClick="laydate({istime: true, format: 'YYYY-MM-DD'})" class="date-icon recieveStartTime" ng-model="addId.recieveStartTime">
+                </li>
+                <li>
+                    <label><em>获得补助结束时间</em></label>
+                    <input type="text" onClick="laydate({istime: true, format: 'YYYY-MM-DD'})" class="date-icon recieveEndTime" ng-model="addId.recieveEndTime">
+                </li>
+                <li>
+                    <label><em>员工姓名</em></label>
+                    <input type="text" ng-model="addId.empName">
+                </li>
+                <li>
+                    <label><em>员工编号</em></label>
+                    <input type="text" ng-model="addId.empNumber">
+                </li>
+                <li>
+                    <label><em>地区</em></label>
+                    <input type="text" ng-model="addId.area">
+                </li>
+                <li>
+                    <label><em>项目组</em></label>
+                    <input type="text" ng-model="addId.projectGroup">
+                </li>
+                <li>
+                    <label><em>岗位</em></label>
+                    <input type="text"  ng-model="addId.job">
+                </li>
+                <li>
+                    <label><em>入职时间</em></label>
+                    <input type="text" onClick="laydate({istime: true, format: 'YYYY-MM-DD'})" class="date-icon entryJobTime" ng-model="addId.entryJobTime">
+                </li>
+
+            </ul>
+        </section>
+    </div>
+    <p class="dataBottom">
+        <span class="imPrompt"><i><img src="/images/prompt.png"></i>带有<i><img src="/images/mandatory.png"></i>的为必填项</span>
+        <button ng-verify="{control:'myform'}" ng-click="addAnceempFun()">提交</button>
+    </p>
+</div>
+
+<script type="text/javascript">
+
+    !function(){
+        laydate.skin('dahong');//切换皮肤，请查看skins下面皮肤库
+    }();
+
+
+</script>

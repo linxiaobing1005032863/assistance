@@ -1,0 +1,42 @@
+<div class="collect ">
+    <div class="sum-select">
+        <ul>
+            <li class="required">
+                <label><i><img src="/images/mandatory.png"></i><em>地区</em></label>
+                <select class="sele  select1" ng-model="area"  ng-change="myFunc()">
+                    <option ng-repeat="list in workOptions">{{list}}</option>
+                </select>
+            </li>
+        </ul>
+    </div>
+    <ul class="sum-list list2" ng-hide="area">
+        <li class="sum-thead">
+            <span>地区</span>
+            <span>高温补贴总金额(总外出天数×6.9)</span>
+        </li>
+        <li class="sum-tbody" ng-repeat="summaryList in summaryListss" ng-model="tabTit">
+            <span>{{summaryList.area}}</span>
+            <span>{{summaryList.assistMoney}}</span>
+        </li>
+    </ul>
+    <ul class="sum-list" ng-show="area">
+        <li class="sum-thead">
+            <span>地区</span>
+            <span>项目名称</span>
+            <span>项目组</span>
+            <span>高温补贴人员</span>
+            <span>外出天数</span>
+            <span>高温补贴总金额(总外出天数×6.9)</span>
+            <span>物资发放总量</span>
+        </li>
+        <li class="sum-tbody" ng-repeat="summaryList in summaryLists">
+            <span>{{summaryList.area}}</span>
+            <span>{{summaryList.projectName}}</span>
+            <span>{{summaryList.projectGroup}}</span>
+            <span>{{summaryList.empName}}</span>
+            <span>{{summaryList.outTime}}</span>
+            <span>{{summaryList.assistMoney}}</span>
+            <span>{{summaryList.thingCondtion}}</span>
+        </li>
+    </ul>
+</div>

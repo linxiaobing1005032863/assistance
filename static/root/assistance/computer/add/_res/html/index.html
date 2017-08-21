@@ -1,0 +1,68 @@
+<div class="content-input add" verify-scope="tipStyle: 1">
+    <div class="input-list">
+        <section>
+            <ul>
+                <li class="required">
+                    <label><i><img src="/images/mandatory.png"></i><em>姓名</em></label>
+                    <input type="text" ng-model="addId.empName" ng-verify="{}">
+                </li>
+                <li class="required">
+                    <label><i><img src="/images/mandatory.png"></i><em>项目组</em></label>
+                    <div class="sele side">
+                        <select class="sele" ng-model="addId.projectGroup">
+                            <option value="">请选择</option>
+                            <option ></option>
+                        </select>
+                        <input type="text"  class="inputDom1"  ng-model="addId.projectGroup" ng-verify="{}">
+                    </div>
+                </li>
+                <li class="required">
+                    <label><i><img src="/images/mandatory.png"></i><em>地区</em></label>
+                    <div class="sele side">
+                        <select class="sele" ng-model="addId.area">
+                            <option ></option>
+                        </select>
+                        <input type="text"  class="inputDom1"  ng-model="addId.area" ng-verify="{}">
+                    </div>
+                </li>
+                <li class="required">
+                    <label><i><img src="/images/mandatory.png"></i><em>补助计薪周期开始时间</em></label>
+                    <input type="text" onClick="laydate({istime: true, format: 'YYYY-MM-DD'})" class="date-icon salaryStartTime" ng-model="addId.salaryStartTime">
+                </li>
+                <li class="required">
+                    <label><i><img src="/images/mandatory.png"></i><em>补助计薪周期结束时间</em></label>
+                    <input type="text" onClick="laydate({istime: true, format: 'YYYY-MM-DD'})" class="date-icon salaryEndTime" ng-model="addId.salaryEndTime">
+                </li>
+                <li>
+                    <label><em>电脑补助开始时间</em></label>
+                    <input type="text" onClick="laydate({istime: true, format: 'YYYY-MM-DD'})" class="date-icon assistStartTime" ng-model="addId.assistStartTime">
+                </li>
+                <li>
+                    <label><em>电脑补助结束时间</em></label>
+                    <input type="text" onClick="laydate({istime: true, format: 'YYYY-MM-DD'})" class="date-icon assistEndTime" ng-model="addId.assistEndTime">
+                </li>
+                <li>
+                    <label><em>补助天数</em></label>
+                    <input type="number" ng-model="addId.assistDays">
+                </li>
+                <li>
+                    <label><em>备注</em></label>
+                    <input type="text"  ng-model="addId.remark">
+                </li>
+            </ul>
+        </section>
+    </div>
+    <p class="dataBottom">
+        <span class="imPrompt"><i><img src="/images/prompt.png"></i>带有<i><img src="/images/mandatory.png"></i>的为必填项</span>
+        <button ng-verify="{control:'myform'}" ng-click="addComputerFun()">提交</button>
+    </p>
+</div>
+
+<script type="text/javascript">
+
+    !function(){
+        laydate.skin('dahong');//切换皮肤，请查看skins下面皮肤库
+    }();
+
+
+</script>

@@ -1,0 +1,94 @@
+<div class="content-input add" verify-scope="tipStyle: 1">
+    <div class="input-list">
+        <section>
+            <ul>
+                <li class="required">
+                    <label><em>补助类型名称</em></label>
+                    <div class="sele side">
+                        <select class="sele" ng-model="editId.typeName"  ng-verify="{}">
+                            <option >电脑补助</option>
+                            <option >高温补助</option>
+                            <option >工龄补助</option>
+                            <option >住宿补助</option>
+                        </select>
+                        <input type="text"  class="inputDom"  ng-model="editId.typeName">
+                    </div>
+                </li>
+                <li class="required">
+                    <label><i><img src="/images/mandatory.png"></i><em>补助开始时间</em></label>
+                    <input type="text" onClick="laydate({istime: true, format: 'YYYY-MM-DD'})" class="date-icon helpStartTime" ng-model="editId.helpStartTime">
+                </li>
+                <li class="required">
+                    <label><i><img src="/images/mandatory.png"></i><em>补助结束时间</em></label>
+                    <input type="text" onClick="laydate({istime: true, format: 'YYYY-MM-DD'})" class="date-icon helpEndTime" ng-model="editId.helpEndTime">
+                </li>
+                <li class="required">
+                    <label><i><img src="/images/mandatory.png"></i><em>补助发放时间</em></label>
+                    <input type="text" onClick="laydate({istime: true, format: 'YYYY-MM-DD'})" class="date-icon helpGiveTime" ng-model="editId.helpGiveTime">
+                </li>
+                <li>
+                    <label><em>补助目的</em></label>
+                    <input type="text" ng-model="editId.targetContent">
+                </li>
+                <li>
+                    <label><em>补助对象</em></label>
+                    <div class="sele side">
+                        <select class="sele" ng-model="editId.helpObject">
+                            <option >全体员工</option>
+                            <option >一线实施项目</option>
+                        </select>
+                        <input type="text"  class="inputDom"  ng-model="editId.helpObject">
+                    </div>
+                </li>
+                <li>
+                    <label><em>补助条件</em></label>
+                    <input type="text"  ng-model="editId.helpCondition">
+                </li>
+                <li>
+                    <label><em>条件依据明细</em></label>
+                    <input type="text"  ng-model="editId.detail">
+                </li>
+                <li>
+                    <label><em>数据来源</em></label>
+                    <input type="text"  ng-model="editId.dataOragin">
+                </li>
+                <li>
+                    <label><em>补助内容</em></label>
+                    <input type="text" ng-model="editId.helpContent">
+                </li>
+                <li>
+                    <label><em>内容明细</em></label>
+                    <input type="text"  ng-model="editId.contentDetail">
+                </li>
+                <li>
+                    <label><em>补助发放形式</em></label>
+                    <select class="sele" ng-model="editId.helpForm">
+                        <option >现金</option>
+                        <option >物资</option>
+                    </select>
+                </li>
+                <li>
+                    <label><em>备注</em></label>
+                    <input type="text"  ng-model="editId.remark">
+                </li>
+                <li style="display:none">
+                    <label><em>id</em></label>
+                    <input type="text"  ng-model="editId.id">
+                </li>
+            </ul>
+        </section>
+    </div>
+    <p class="dataBottom">
+        <span class="imPrompt"><i><img src="/images/prompt.png"></i>带有<i><img src="/images/mandatory.png"></i>的为必填项</span>
+        <button ng-verify="{control:'myform'}" ng-click="editPlanFun()">提交</button>
+    </p>
+</div>
+
+<script type="text/javascript">
+
+    !function(){
+        laydate.skin('dahong');//切换皮肤，请查看skins下面皮肤库
+    }();
+
+
+</script>

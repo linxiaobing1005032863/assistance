@@ -1,0 +1,34 @@
+<div class="nav-list" ng-repeat="list in showsList">
+    <h3 class="header-menu big" ng-click="showMenu(list,true)" ng-hide="isHide">
+    <i class="nav-arrow" ng-class="{true: '', false: 'change-angle'}[list.showIs]"></i>
+    {{list.item}}</h3>
+    <ul class="menu" ng-if="list.menuList.length"  ng-show="list.showIs" ng-repeat="menuInfo in list.menuList">
+        <li ng-click="navClass(menuInfo.msg)" ng-show="assistanceplan"  ng-class="{'active':navCla==menuInfo.msg}"  ui-sref="_root.assistance.ssistanceplan.list[12]" >
+            <a href="javascript:void(0)">{{menuInfo.name}}</a>
+        </li>
+        <li ng-click="navClass(menuInfo.msg)"  ng-show="assistancestandard" ng-class="{'active':navCla==menuInfo.msg}"  ui-sref="_root.assistance.tancestandard.list[12]">
+            <a href="javascript:void(0)">{{menuInfo.name2}}</a>
+        </li>
+        <li ng-click="navClass(menuInfo.msg)"  ng-show="assistancerecord" ng-class="{'active':navCla==menuInfo.msg}"  ui-sref="_root.assistance.record.list[12]">
+            <a href="javascript:void(0)">{{menuInfo.name3}}</a>
+        </li>
+        <li ng-click="navClass(menuInfo.msg)"  ng-show="assistanceemp" ng-class="{'active':navCla==menuInfo.msg}"  ui-sref="_root.assistance.anceemp.list[12]">
+            <a href="javascript:void(0)">{{menuInfo.name4}}</a>
+        </li>
+        <li ng-click="navClass(menuInfo.msg)"  ng-show="computerassist" ng-class="{'active':navCla==menuInfo.msg}"  ui-sref="_root.assistance.computer.list[12]">
+            <a href="javascript:void(0)">{{menuInfo.name5}}</a>
+        </li>
+        <li ng-click="navClass(menuInfo.msg)"  ng-show="hotassist" ng-class="{'active':navCla==menuInfo.msg}"  ui-sref="_root.assistance.hotassist.list[12]" >
+            <a href="javascript:void(0)">{{menuInfo.name6}}</a>
+        </li>
+        <li ng-click="navClass(menuInfo.msg)"  ng-show="ageassist" ng-class="{'active':navCla==menuInfo.msg}"  ui-sref="_root.assistance.ageassist.list[12]">
+            <a href="javascript:void(0)">{{menuInfo.name7}}</a>
+        </li>
+        <li ng-click="navClass(menuInfo.msg)"  ng-show="houseassist" ng-class="{'active':navCla==menuInfo.msg}"  ui-sref="_root.assistance.houseassist.list[12]">
+            <a href="javascript:void(0)">{{menuInfo.name8}}</a>
+        </li>
+        <li ng-click="navClass(menuInfo.msg)"  ng-show="cuspermission" ng-class="{'active':navCla==menuInfo.msg}"  ui-sref="_root.assistance.setting.list[12]">
+            <a href="javascript:void(0)">{{menuInfo.name9}}</a>
+        </li>
+    </ul>
+</div>

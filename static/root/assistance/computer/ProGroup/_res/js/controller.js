@@ -18,7 +18,10 @@ app.controller('computerProGroupCtrl',function($scope,computerSer,toastr,ipCooki
         }
     });
     $scope.myFunc=function () {
-        var data={projectGroup:$scope.projectGroup};
+        var vm=$scope;
+        data={
+            projectGroup:$scope.projectGroup
+        };
         computerSer.ComputerProGroup(data).then(function(response){
             if(response.data.code == 0){
                 $scope.summaryLists = response.data.data;

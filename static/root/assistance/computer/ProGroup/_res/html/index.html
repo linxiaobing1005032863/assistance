@@ -3,23 +3,23 @@
         <ul>
             <li class="required">
                 <label><i><img src="/images/mandatory.png"></i><em>项目组</em></label>
-                <select class="sele  select1" ng-model="area"  ng-change="myFunc()">
+                <select class="sele  select1" ng-model="projectGroup"  ng-change="myFunc()">
                     <option ng-repeat="list in workOptions">{{list}}</option>
                 </select>
             </li>
         </ul>
     </div>
-    <ul class="sum-list list2" ng-hide="area">
+    <ul class="sum-list list2" ng-hide="projectGroup">
         <li class="sum-thead">
             <span>项目组</span>
             <span>金额</span>
         </li>
-        <li class="sum-tbody" ng-repeat="summaryList in summaryListss" ng-model="tabTit">
+        <li class="sum-tbody" ng-repeat="summaryList in summaryListss" >
             <span>{{summaryList.projectGroup}}</span>
             <span>{{summaryList.assistMoney}}</span>
         </li>
     </ul>
-    <ul class="sum-list" ng-show="area">
+    <ul class="sum-list" ng-show="projectGroup">
         <li class="sum-thead">
             <span>地区</span>
             <span>姓名</span>

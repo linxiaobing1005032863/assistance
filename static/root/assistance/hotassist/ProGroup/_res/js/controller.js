@@ -18,7 +18,10 @@ app.controller('hotProGroupCtrl',function($scope,hotSer,toastr,ipCookie){
         }
     });
     $scope.myFunc=function () {
-        var data={projectGroup:$scope.projectGroup};
+        var vm=$scope;
+         data={
+            projectGroup:$scope.projectGroup
+        };
         hotSer.HotProGroup(data).then(function(response){
             if(response.data.code == 0){
                 $scope.summaryLists = response.data.data;

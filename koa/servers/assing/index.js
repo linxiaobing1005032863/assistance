@@ -536,11 +536,12 @@ module.exports = function(){
         var options = {
             method : 'GET',
             timeout : 3000,
-            uri : config()['rurl'] + `/computerassist/v1/collectByProGroup`,
+            uri : config()['rurl'] + '/computerassist/v1/collectByProGroup?projectGroup='+encodeURIComponent(argvs.projectGroup),
             headers:{
                 userToken:argvs.userToken
             }
         };
+        console.log(options)
         return request(options);
     };
     //电脑补助项目组汇总

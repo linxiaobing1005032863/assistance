@@ -57,11 +57,11 @@ app.factory('computerSer',function ($http) {
     function AllComputerProGroup(){
         return $http.get('/computerassist/collectByProGroup2')
     }
+
+
     //项目汇总
-    function ComputerProGroup(data) {
-        return $http.get('/computerassist/collectByProGroup',{
-            params:data
-        })
+    function ComputerProGroup(data){
+        return $http.get('/computerassist/collectByProGroup',{params:data})
     }
     //id查询find
     function findComputerId(data){

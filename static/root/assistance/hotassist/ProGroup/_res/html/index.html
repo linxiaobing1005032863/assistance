@@ -28,16 +28,14 @@
             <span>高温补贴人员</span>
             <span>外出天数</span>
             <span>高温补贴总金额(总外出天数×6.9)</span>
-            <span>物资发放总量</span>
         </li>
         <li class="sum-tbody" ng-repeat="summaryList in summaryLists" ng-model="tabTit">
             <span>{{summaryList.area}}</span>
             <span>{{summaryList.projectName}}</span>
             <span>{{summaryList.projectGroup}}</span>
             <span>{{summaryList.empName}}</span>
-            <span>{{summaryList.outTime}}</span>
+            <span>{{summaryList.counts}}</span>
             <span>{{summaryList.assistMoney}}</span>
-            <span>{{summaryList.thingCondtion}}</span>
         </li>
     </ul>
 </div>

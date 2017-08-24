@@ -1232,14 +1232,23 @@ body {
 
 .right-section .top-content .content .menu .list li a.lis {
   border-color: #06afe1;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
 
 .right-section .top-content .content .menu .list li a.add {
   border-color: #bfabcf;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
 
 .right-section .top-content .content .menu .list li a.same-one {
   border-color: #93c1bb;
+  white-space:nowrap;
+  overflow:hidden;
+  text-overflow:ellipsis;
 }
 
 .right-section .top-content .content .menu .list li a.same-two {
@@ -1679,6 +1688,9 @@ body {
   display: inline-block;
   width: 112px;
   text-align-last: justify;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .right-section .top-content .content .content-wrap .content-input .input-list section ul li label i {
@@ -2904,13 +2916,24 @@ ul li .data-add{
 }
 /*可手填的下拉框*/
 .inputDom{
-  width: 47%;
+  width: 47% ;
   position: absolute;
-  margin-left: 59px;
   border: 0!important;
   height: 30px;
   padding-left: 10px !important;
+  margin-left:46px !important;
+ /* margin-top:1px !important;*/
 }
+.inputDom2{
+  width: 47% ;
+  position: absolute;
+  border: 0!important;
+  height: 30px;
+  padding-left: 10px !important;
+  margin-left:46px !important;
+}
+
+
 .right-section .top-content .content .content-wrap .content-input .input-list section ul li .inputDom:hover{
   box-shadow: 0 0 3px white !important;
 }

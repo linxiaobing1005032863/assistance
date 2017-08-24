@@ -541,7 +541,6 @@ module.exports = function(){
                 userToken:argvs.userToken
             }
         };
-        console.log(options)
         return request(options);
     };
     //电脑补助项目组汇总
